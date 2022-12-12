@@ -1,0 +1,18 @@
+
+let email = document.getElementById('email')
+let password = document.getElementById('password')
+let login = document.getElementById('login')
+login.addEventListener('click', (e) => {
+     e.preventDefault()
+    let emailV = email.value
+    let passwordV = password.value
+    let emailDB = localStorage.getItem('email')
+    let passwordDB = localStorage.getItem('password')
+    if (emailV === emailDB && passwordV === passwordDB){
+        alert('successful') 
+    }
+    else{
+        alert('invalid email or password')
+    }
+})
+
